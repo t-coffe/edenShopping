@@ -22,7 +22,7 @@ for (let i = 0; i < products.length; i++) {
   const image = document.createElement('img');
   image.setAttribute('src', products[i].thumbnail);
   const price = document.createElement('p');
-  price.textContent = price;
+  price.textContent = products[i].price;
 
   article.appendChild(title);
   article.appendChild(image);
