@@ -8,19 +8,13 @@
 }
 article {
   border: solid 1px rgb(156, 144, 81);
-  padding-right: 2rem;
-  padding-left: 1rem;
-  width: 30vw;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 img{
-  width: 100%;
-}
-button {
-  padding: 0;
   width: 50%;
-  border: none;
 }

@@ -23,29 +23,19 @@ for (let i = 0; i < products.length; i++) {
   
   const price = document.createElement('p');
   price.textContent = products[i].price;
-  const click = document.createElement('button');
-  click.setAttribute('popovertarget','popImages');
-  
 
   article.appendChild(title);
-  click.appendChild(thumbnail);
-  article.appendChild(click);
+  article.appendChild(thumbnail);
   article.appendChild(price);
   app.appendChild(article);
+
+  thumbnail.addEventListener('click', async ()=> {
+    let urle = 'https://dummyjson.com/products/' + products[i].id ;
+    const j = await fetch(urle); 
+    const jjson = await j.json();
+  })
 }
 
-
-
-console.log(url);
-const produit = await fetch(url);
-const produitAsJson = await produit.json();
-const images = produitAsJson.products;
-
-
-for (let i = 0; i < products.length; i++) {
-  let url = 'https://dummyjson.com/products/' + products[i].id;
-  
-}
 
 
 
