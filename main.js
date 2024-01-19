@@ -18,33 +18,35 @@ for (let i = 0; i < products.length; i++) {
   const article = document.createElement('article');
   const title = document.createElement('h3');
   title.textContent = products[i].title;
-  //console.log(title);
-  const image = document.createElement('img');
-  image.setAttribute('src', products[i].thumbnail);
+  const thumbnail = document.createElement('img');
+  thumbnail.setAttribute('src', products[i].thumbnail);
+  
   const price = document.createElement('p');
   price.textContent = products[i].price;
+  const click = document.createElement('button');
+  click.setAttribute('popovertarget','popImages');
+  
 
   article.appendChild(title);
-  article.appendChild(image);
+  click.appendChild(thumbnail);
+  article.appendChild(click);
   article.appendChild(price);
   app.appendChild(article);
 }
 
 
 
+console.log(url);
+const produit = await fetch(url);
+const produitAsJson = await produit.json();
+const images = produitAsJson.products;
 
 
+for (let i = 0; i < products.length; i++) {
+  let url = 'https://dummyjson.com/products/' + products[i].id;
+  
+}
 
-
-
-
-
-const article = document.createElement('article');
-const title = document.createElement('h3');
-title.textContent = "necklace";
-const image = document.createElement('img');
-image.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Seven-Stranded_Necklace_%28Satlari%29_MET_15.95.72.jpg');
-const price = document.createElement('p');
 
 
 
